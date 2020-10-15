@@ -15,6 +15,7 @@
 		1601C3A825381774006B5690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1601C3A625381774006B5690 /* LaunchScreen.storyboard */; };
 		1601C3B325381774006B5690 /* TBSRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601C3B225381774006B5690 /* TBSRTests.swift */; };
 		1601C3BE25381774006B5690 /* TBSRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601C3BD25381774006B5690 /* TBSRUITests.swift */; };
+		16B0608325383A53009F35B7 /* TaskDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B0608225383A53009F35B7 /* TaskDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1601C3B925381774006B5690 /* TBSRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBSRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1601C3BD25381774006B5690 /* TBSRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSRUITests.swift; sourceTree = "<group>"; };
 		1601C3BF25381774006B5690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B0608225383A53009F35B7 /* TaskDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				1601C39B25381772006B5690 /* AppDelegate.swift */,
+				16B0608225383A53009F35B7 /* TaskDataModel.swift */,
 				1601C39D25381772006B5690 /* SceneDelegate.swift */,
 				1601C39F25381772006B5690 /* ViewController.swift */,
 				1601C3A125381772006B5690 /* Main.storyboard */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B0608325383A53009F35B7 /* TaskDataModel.swift in Sources */,
 				1601C3A025381772006B5690 /* ViewController.swift in Sources */,
 				1601C39C25381772006B5690 /* AppDelegate.swift in Sources */,
 				1601C39E25381772006B5690 /* SceneDelegate.swift in Sources */,
