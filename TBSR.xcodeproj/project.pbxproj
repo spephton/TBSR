@@ -15,6 +15,7 @@
 		1601C3A825381774006B5690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1601C3A625381774006B5690 /* LaunchScreen.storyboard */; };
 		1601C3B325381774006B5690 /* TBSRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601C3B225381774006B5690 /* TBSRTests.swift */; };
 		1601C3BE25381774006B5690 /* TBSRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601C3BD25381774006B5690 /* TBSRUITests.swift */; };
+		165D76B4253D9FF000FE0DAA /* TaskDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B0608225383A53009F35B7 /* TaskDataModel.swift */; };
 		16B0608325383A53009F35B7 /* TaskDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B0608225383A53009F35B7 /* TaskDataModel.swift */; };
 		16B0608825395242009F35B7 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B0608725395242009F35B7 /* TaskListTableViewController.swift */; };
 		16B060902539535B009F35B7 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B0608F2539535B009F35B7 /* NewTaskViewController.swift */; };
@@ -280,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165D76B4253D9FF000FE0DAA /* TaskDataModel.swift in Sources */,
 				1601C3B325381774006B5690 /* TBSRTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJ3AL57737;
 				INFOPLIST_FILE = TBSR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJ3AL57737;
 				INFOPLIST_FILE = TBSR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
