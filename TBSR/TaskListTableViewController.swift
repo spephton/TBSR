@@ -8,6 +8,9 @@
 import UIKit
 
 class TaskListTableViewController: UITableViewController {
+    
+    // MARK: Properties
+    let dataModel = TaskDataModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
