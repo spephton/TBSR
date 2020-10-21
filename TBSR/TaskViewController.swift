@@ -22,8 +22,9 @@ class TaskViewController: UIViewController{
         let testTask = Task(name: "Empty the bins", goal: "keep the house clean", dueDate: Date(timeIntervalSinceNow: 12*24*3600))
         
         
+        
         //Test layout in simulator
-        taskName.text = testTask.getNameDisplayString()
+        taskName.text = testTask.getNameString()
         goalLabel.text = testTask.getGoalDisplayString()
         
         let timeToDue = testTask.getTimeToDueDisplayString()

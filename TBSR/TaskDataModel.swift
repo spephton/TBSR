@@ -30,10 +30,10 @@ class TaskDataModel {
         }
     }
     
-    func taskBy(name: String) -> Task? {
+    func taskIndexBy(name: String) -> Int? {
         // Nil if name not present in list. Must search whole list for name (slow for large lists)
-        if let selectedTask = taskList.first(where: { $0.0 == name }) {
-            return selectedTask.1
+        if let selectedTaskIndex = taskList.firstIndex(where: { $0.0 == name }) {
+            return selectedTaskIndex
         } else {
             return nil
         }
