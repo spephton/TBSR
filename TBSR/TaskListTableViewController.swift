@@ -10,27 +10,18 @@ import UIKit
 class TaskListTableViewController: UITableViewController {
     
     // MARK: Properties
-    let dataModel: TaskDataModel
-    var taskList: [(String, Task)]
-
+    let dataModel = TaskDataModel()
+    var taskList: [(String, Task)] = []
     
     
     
     
-    // MARK: Initialization
-    override init(style: UITableView.Style) {
-        dataModel = TaskDataModel()
-        taskList = dataModel.getTaskList()
-        super.init(style: style)
-    }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        taskList = dataModel.getTaskList()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -41,24 +32,30 @@ class TaskListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return taskList.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cellIdentifier = "TaskTableViewCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TaskTableViewCell else {
+            fatalError("The dequeued cell is not an instance of TaskTableViewCell")
+        }
 
         // Configure the cell...
-
+        let task = taskList[indexPath.row].1
+        cell.name.text = task.getNameString()
+        cell.goal.text = task.getGoalDisplayString()
+        cell.timeToDue.text = task.getTimeToDueDisplayString()
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
