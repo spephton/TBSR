@@ -23,6 +23,10 @@ class Task {
         return prepend + goal
     }
     
+    func getGoalString() -> String {
+        return goal
+    }
+    
     func getTimeToDueDisplayString() -> String {
         let timeToDue = dueDate.timeIntervalSinceNow
         return dueDate.displayStringOfTimeInterval(timeToDue)

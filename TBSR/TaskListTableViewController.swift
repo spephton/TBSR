@@ -10,8 +10,24 @@ import UIKit
 class TaskListTableViewController: UITableViewController {
     
     // MARK: Properties
-    let dataModel = TaskDataModel()
+    let dataModel: TaskDataModel
+    var taskList: [(String, Task)]
 
+    
+    
+    
+    
+    // MARK: Initialization
+    override init(style: UITableView.Style) {
+        dataModel = TaskDataModel()
+        taskList = dataModel.getTaskList()
+        super.init(style: style)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -18,6 +18,7 @@ class TaskDataModel {
     
     // MARK: Public methods
     func getTaskList() -> [(String, Task)] { // Read-only copy of entire task list (e.g. for initial load)
+        createSampleTaskList()
         return taskList
     }
     
@@ -66,6 +67,16 @@ class TaskDataModel {
         } else {
             return true
         }
+    }
+    
+    private func createSampleTaskList() {
+        let task = Task(name: "Empty bins", goal: "keep house clean", dueDate: Date.init(timeIntervalSinceNow: (7*24*3600 + 1)))
+        addTask(task)
+        task.updateProperties(name: "Wash the windows", goal: nil, dueDate: Date(timeIntervalSinceNow: 3*24*3600 + 1))
+        addTask(task)
+        task.updateProperties(name: "Play a game of Dota", goal: "Not suck at Dota", dueDate: nil)
+        addTask(task)
+        
     }
     
     // MARK: Error functions
