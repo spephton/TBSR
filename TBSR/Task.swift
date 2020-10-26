@@ -5,7 +5,7 @@
 //  Created by Jacob Sephton on 20/10/20.
 //
 
-import Foundation
+import UIKit
 
 class Task {
     private var name: String
@@ -50,6 +50,17 @@ class Task {
             self.dueDate = newDueDate
         }
     }
+    
+    func getClockGlyph(size: CGFloat) -> NSMutableAttributedString {
+        let clockSymbol = NSTextAttachment()
+        let boldConfiguration = UIImage.SymbolConfiguration(pointSize: size, weight: .bold)
+        clockSymbol.image = UIImage(systemName: "clock", withConfiguration: boldConfiguration)
+        
+        let clockString = NSMutableAttributedString(string: "")
+        clockString.append(NSAttributedString(attachment: clockSymbol))
+        
+        return clockString
+    }
 }
 
 extension Date {
@@ -65,7 +76,6 @@ extension Date {
         // input and output variables
         let timeInSeconds = Double(timeInterval)
         var displayString: String
-        
         
         
         // generate display string

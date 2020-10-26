@@ -27,16 +27,8 @@ class TaskViewController: UIViewController{
         taskName.text = testTask.getNameString()
         goalLabel.text = testTask.getGoalDisplayString()
         
-        let timeToDue = testTask.getTimeToDueDisplayString()
-        let clockSymbol = NSTextAttachment()
-        let boldConfiguration = UIImage.SymbolConfiguration(pointSize: CGFloat(21), weight: .bold)
-        clockSymbol.image = UIImage(systemName: "clock", withConfiguration: boldConfiguration)
-        let dueDateDisplayText = NSMutableAttributedString(string: "")
-        dueDateDisplayText.append(NSAttributedString(attachment: clockSymbol))
-        dueDateDisplayText.append(NSAttributedString(string: " "))
-        dueDateDisplayText.append(NSAttributedString(string: timeToDue))
         
-        dueDateLabel.attributedText = dueDateDisplayText
+        dueDateLabel.attributedText = NSAttributedString(string: "fix me")
         
     }
 

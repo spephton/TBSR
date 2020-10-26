@@ -51,7 +51,12 @@ class TaskListTableViewController: UITableViewController {
         let task = taskList[indexPath.row].1
         cell.name.text = task.getNameString()
         cell.goal.text = task.getGoalDisplayString()
-        cell.timeToDue.text = task.getTimeToDueDisplayString()
+        
+        let ttdTextPointSize = cell.timeToDue.font.pointSize
+        let ttdDisplayString = task.getClockGlyph(size: ttdTextPointSize + 1)
+        ttdDisplayString.append(NSAttributedString(string: " "))
+        ttdDisplayString.append(NSAttributedString(string: task.getTimeToDueDisplayString()))
+        cell.timeToDue.attributedText = ttdDisplayString
         
         return cell
     }
