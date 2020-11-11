@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FaV-AY-NYX">
-                                <rect key="frame" x="20" y="84" width="374" height="85.5"/>
+                                <rect key="frame" x="20" y="128" width="374" height="85.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Task&gt;" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShW-3l-L7z">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
@@ -34,13 +34,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;TimeTilDue&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1b-M0-24x">
-                                <rect key="frame" x="20" y="179.5" width="130.5" height="24"/>
+                                <rect key="frame" x="20" y="223.5" width="130.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BJi-WB-Ryc">
-                                <rect key="frame" x="20" y="253.5" width="109" height="92"/>
+                                <rect key="frame" x="20" y="297.5" width="109" height="92"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmD-rp-5ld">
                                         <rect key="frame" x="0.0" y="0.0" width="109" height="41"/>
@@ -69,6 +69,7 @@
                             <constraint firstItem="FaV-AY-NYX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="jdN-JD-9iX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Wf9-bM-rOT"/>
                     <connections>
                         <outlet property="dueDateLabel" destination="f1b-M0-24x" id="WhJ-Ek-dhY"/>
                         <outlet property="goalLabel" destination="aRv-LY-NOe" id="7jk-Np-rxh"/>
@@ -134,6 +135,7 @@
                                     <outlet property="goal" destination="kqo-lS-hfW" id="EBy-dp-tGQ"/>
                                     <outlet property="name" destination="9DT-wV-1AZ" id="CoN-Mo-4dP"/>
                                     <outlet property="timeToDue" destination="0fm-9h-8A0" id="ZNY-2i-KHB"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="334-Ar-Obu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
